@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "data_nyctaxi/external_30.npy",
+      "sha256": "a6d2e1a86ad43e3c5e7df337eeac897be16b928a95af2b08fbc4474a6e1ff031",
+      "bytes": 7784960
+    },
+    {
+      "path": "data_nyctaxi/timestamps_30.csv",
+      "sha256": "7ee2d9e4932a111d699600e81db71ce4240d99fb47fab29cd1bd99da111912ec",
+      "bytes": 2088813
+    },
+    {
+      "path": "data_nyctaxi/external_60.npy",
+      "sha256": "d6363873fd6168caa4c131810a77cb4c7759c511b5e2e0d2f74aab401e9e2652",
+      "bytes": 3892544
+    },
+    {
+      "path": "data_nyctaxi/timestamps_60.csv",
+      "sha256": "aa6a541115acb45f09e2b672d5a68401c1eb0d368c288b9e7c066860ffb107a8",
+      "bytes": 1038885
+    },
+    {
+      "path": "data_nyctaxi/external_90.npy",
+      "sha256": "fca33b4056ce854c99484d77cc11b91661a521c07c1de58749e22424aab0b96a",
+      "bytes": 2595072
+    },
+    {
+      "path": "data_nyctaxi/timestamps_90.csv",
+      "sha256": "472cc6b9b28acf1fe4fee21f3e4e56c4f7faf73fb1a890084516c8681c35ecc4",
+      "bytes": 688909
+    },
+    {
+      "path": "data_nycbike/external_30.npy",
+      "sha256": "f4f7bad6f64c749f8e3196956e7a00170b982bc0652908330b08e14329725eaa",
+      "bytes": 7792256
+    },
+    {
+      "path": "data_nycbike/timestamps_30.csv",
+      "sha256": "50f7069cc53479f2d066c1d54c871e4c07bc4289eb9e5176153bb2c031d3f270",
+      "bytes": 2090781
+    },
+    {
+      "path": "data_nycbike/external_60.npy",
+      "sha256": "d4da86e365195b819d9130fca172302ea9056795473e79c453098566a107d69b",
+      "bytes": 3896192
+    },
+    {
+      "path": "data_nycbike/timestamps_60.csv",
+      "sha256": "bddb061463a6a4e9bbca971ffa4b9901d9cc472eb13aee452d337a99270423be",
+      "bytes": 1039869
+    },
+    {
+      "path": "data_nycbike/external_90.npy",
+      "sha256": "ab8d8d2ae3edb1c19a771d81a3065945f1bfe639cd9f4df1f0d3471146e91dc4",
+      "bytes": 2597504
+    },
+    {
+      "path": "data_nycbike/timestamps_90.csv",
+      "sha256": "33d79a342fa9284198c65de024e56adfd2a700f17a49a86e816c3dd33dd3cf96",
+      "bytes": 689565
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "nyctaxi",
+  "minutes": 30,
+  "samples": 51216,
+  "train_stop": 48528,
+  "validation_stop": 49872,
+  "max_epochs": 300,
+  "learning_rate": 0.0002,
+  "batch_size": 128,
+  "weight_decay": 0.08,
+  "scheduler_epochs": 500,
+  "warmup_epochs": 5,
+  "patience": 60,
+  "max_grad_norm": 1.0,
+  "amp_initial_scale": 256.0,
+  "workers": 0,
+  "threads": 4,
+  "input_shape": [
+    12,
+    2,
+    12,
+    16
+  ],
+  "target_shape": [
+    2,
+    12,
+    16
+  ]
+}

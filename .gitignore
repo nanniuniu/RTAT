@@ -1,0 +1,30 @@
+# Runtime and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Locally obtained benchmark arrays and newly generated results
+/data/
+/runs/
+/results/
+/output/
+/weather_raw/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.npz
+*.npy
+!external_data/**/external_*.npy
+*.jsonl
+*.log
+*.partial

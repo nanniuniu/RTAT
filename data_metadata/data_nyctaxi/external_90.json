@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "dataset": "nyctaxi",
+  "minutes": 90,
+  "sample_count": 17072,
+  "external_width": 38,
+  "feature_names": [
+    "temperature_2m_celsius",
+    "wind_speed_10m_m_s",
+    "weekend",
+    "weather_wmo_0",
+    "weather_wmo_1",
+    "weather_wmo_2",
+    "weather_wmo_3",
+    "weather_wmo_45",
+    "weather_wmo_48",
+    "weather_wmo_51",
+    "weather_wmo_53",
+    "weather_wmo_55",
+    "weather_wmo_56",
+    "weather_wmo_57",
+    "weather_wmo_61",
+    "weather_wmo_63",
+    "weather_wmo_65",
+    "weather_wmo_66",
+    "weather_wmo_67",
+    "weather_wmo_71",
+    "weather_wmo_73",
+    "weather_wmo_75",
+    "weather_wmo_77",
+    "weather_wmo_80",
+    "weather_wmo_81",
+    "weather_wmo_82",
+    "weather_wmo_85",
+    "weather_wmo_86",
+    "weather_wmo_95",
+    "weather_wmo_96",
+    "weather_wmo_99",
+    "weekday_0",
+    "weekday_1",
+    "weekday_2",
+    "weekday_3",
+    "weekday_4",
+    "weekday_5",
+    "weekday_6"
+  ],
+  "feature_file": "external_90.npy",
+  "feature_sha256": "fca33b4056ce854c99484d77cc11b91661a521c07c1de58749e22424aab0b96a",
+  "timestamp_file": "timestamps_90.csv",
+  "timestamp_sha256": "472cc6b9b28acf1fe4fee21f3e4e56c4f7faf73fb1a890084516c8681c35ecc4",
+  "x_sha256": "a692d942f8df94a8d5bf6b80450330c84a7d9f908d89ca2f67d0d4ca774119d8",
+  "y_sha256": "0a35fda64e59f7a4e5112d5a7c0ab9164e3b54c03c6cd5cb8427ab844afb8f1a",
+  "flow_audit": {
+    "dataset": "nyctaxi",
+    "published_start": "2013-01-01",
+    "published_end": "2015-12-31",
+    "published_days": 1095,
+    "date_source": "https://arxiv.org/html/2111.03459v1#S4.SS1",
+    "absolute_timestamp_status": "reconstructed_from_published_period",
+    "bin_convention": "fixed 24h local wall-clock day; bins labelled by start",
+    "original_timezone_and_missing_bin_policy_verified": false,
+    "scales": [
+      {
+        "minutes": 30,
+        "sample_count": 51216,
+        "raw_rows": 52560,
+        "lags": [
+          1344,
+          1008,
+          672,
+          336,
+          192,
+          144,
+          96,
+          48,
+          4,
+          3,
+          2,
+          1
+        ],
+        "all_history_frames_match": true,
+        "consecutive_30min_sum_matches": true,
+        "x_sha256": "e3c133249bafac1878c57a6c5b9d499160b3e85ebe466c7208fc8149d34a2590",
+        "y_sha256": "4002301b215889e875f13a54a41ba73b089f4f5a436719f9e38c23ed98261029"
+      },
+      {
+        "minutes": 60,
+        "sample_count": 25608,
+        "raw_rows": 26280,
+        "lags": [
+          672,
+          504,
+          336,
+          168,
+          96,
+          72,
+          48,
+          24,
+          4,
+          3,
+          2,
+          1
+        ],
+        "all_history_frames_match": true,
+        "consecutive_30min_sum_matches": true,
+        "x_sha256": "031477e3cb97de4b4be1257bdc77b372115fa5a5886b8138431d15dcbaf052f2",
+        "y_sha256": "4485f926a2bc134d1cdbac3659fdf98d7138a6504f0dc8616329a8b4040efb33"
+      },
+      {
+        "minutes": 90,
+        "sample_count": 17072,
+        "raw_rows": 17520,
+        "lags": [
+          448,
+          336,
+          224,
+          112,
+          64,
+          48,
+          32,
+          16,
+          4,
+          3,
+          2,
+          1
+        ],
+        "all_history_frames_match": true,
+        "consecutive_30min_sum_matches": true,
+        "x_sha256": "a692d942f8df94a8d5bf6b80450330c84a7d9f908d89ca2f67d0d4ca774119d8",
+        "y_sha256": "0a35fda64e59f7a4e5112d5a7c0ab9164e3b54c03c6cd5cb8427ab844afb8f1a"
+      }
+    ]
+  },
+  "timeline_status": "published_period_local_wallclock_reconstruction_not_original_timestamps",
+  "weather_source": "https://open-meteo.com/en/docs/historical-weather-api",
+  "weather_model": "ERA5",
+  "representative_requested_lat_lon": [
+    40.7128,
+    -74.006
+  ],
+  "weather_spatial_scope": "single city-level point; not a grid georeferencing claim",
+  "weather_requests": [
+    "https://archive-api.open-meteo.com/v1/archive?latitude=40.7128&longitude=-74.006&start_date=2013-01-01&end_date=2014-01-02&hourly=temperature_2m%2Cwind_speed_10m%2Cweather_code&models=era5&timezone=GMT&wind_speed_unit=ms",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=40.7128&longitude=-74.006&start_date=2014-01-01&end_date=2015-01-02&hourly=temperature_2m%2Cwind_speed_10m%2Cweather_code&models=era5&timezone=GMT&wind_speed_unit=ms",
+    "https://archive-api.open-meteo.com/v1/archive?latitude=40.7128&longitude=-74.006&start_date=2015-01-01&end_date=2016-01-02&hourly=temperature_2m%2Cwind_speed_10m%2Cweather_code&models=era5&timezone=GMT&wind_speed_unit=ms"
+  ],
+  "weather_response_locations": [
+    {
+      "latitude": 40.75,
+      "longitude": -74.0,
+      "elevation": 32.0,
+      "hourly_units": {
+        "time": "iso8601",
+        "temperature_2m": "°C",
+        "wind_speed_10m": "m/s",
+        "weather_code": "wmo code"
+      }
+    },
+    {
+      "latitude": 40.75,
+      "longitude": -74.0,
+      "elevation": 32.0,
+      "hourly_units": {
+        "time": "iso8601",
+        "temperature_2m": "°C",
+        "wind_speed_10m": "m/s",
+        "weather_code": "wmo code"
+      }
+    },
+    {
+      "latitude": 40.75,
+      "longitude": -74.0,
+      "elevation": 32.0,
+      "hourly_units": {
+        "time": "iso8601",
+        "temperature_2m": "°C",
+        "wind_speed_10m": "m/s",
+        "weather_code": "wmo code"
+      }
+    }
+  ],
+  "weather_raw_sha256": {
+    "era5_nyc_2013_utc.json": "792ec34c3bb1d34e32d10cff3e2ee2c12f213bbb4a0b2417a131bcc1fb016f87",
+    "era5_nyc_2014_utc.json": "38fe8a743419b5ec90655792b490c71a1042d8b1f8221315a310e149e250777e",
+    "era5_nyc_2015_utc.json": "70066b90380d6ad7db6877b7cd8291df065748522c4ac39bdaf68e56e6bc1f36"
+  },
+  "weather_valid_time_policy": "backward as-of at target start minus 60 minutes",
+  "weather_valid_age_minutes_min_max": [
+    60.0,
+    120.0
+  ],
+  "dst_policy": "earlier UTC on repeated wall hour; backward hold across absent spring hour",
+  "availability": "retrospective reanalysis; not operationally available at forecast origin",
+  "calendar_policy": "target weekday Monday=0; weekend Saturday/Sunday",
+  "target_first": "2013-01-29T00:00",
+  "target_last": "2015-12-31T22:30",
+  "original_weather_reproduced": false
+}

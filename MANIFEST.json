@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "prepared": "2026-11-03",
+  "scope": "RTAT model and experiment code, matched external/calendar data; no weights or historical run artifacts.",
+  "files": {
+    ".gitignore": {
+      "bytes": 351,
+      "sha256": "6f18182aafd662942e3e1385f364e62048a8e2a287d7cb1738b386d380d7c700"
+    },
+    "assets/architecture.png": {
+      "bytes": 526490,
+      "sha256": "9ade3bae874308d1cb503bb2c949558e8cd7224afd0c82d7b5f9785a6c1c8547"
+    },
+    "configs/nycbike_30.json": {
+      "bytes": 462,
+      "sha256": "1f060d72d69effff5ef964d5bf56ef5954de03a319a62bd766c810aab5f7dfd3"
+    },
+    "configs/nycbike_60.json": {
+      "bytes": 462,
+      "sha256": "2f530276e7ce1abbf735b7c832ebb0f130f1beac94a9a99d7508a28763cdf0dd"
+    },
+    "configs/nycbike_90.json": {
+      "bytes": 462,
+      "sha256": "c62f0591ec5a91a5afbea9bdb3a89765fb3cedf96e78b3ae06e5990eb14704b4"
+    },
+    "configs/nyctaxi_30.json": {
+      "bytes": 462,
+      "sha256": "2e8b64eb83e44a8f79e37ba0e9d249430fb74c6261a2bef4b545438336c54b3e"
+    },
+    "configs/nyctaxi_60.json": {
+      "bytes": 462,
+      "sha256": "348f7eb7f68e5aedcbfb1f60ec66bacfa1e387cfe9312c1fe2dff77ff13042d9"
+    },
+    "configs/nyctaxi_90.json": {
+      "bytes": 462,
+      "sha256": "6b5b504a659967caf6edde504a9cfa7e25a1b7f7d40a2aed27e742bd5617e98f"
+    },
+    "data_metadata/data_nycbike/external_30.json": {
+      "bytes": 6194,
+      "sha256": "0f5582c9c17d080eae5b4e8bcb5663f3aed2fabc471d0d6b90ed696d159135a4"
+    },
+    "data_metadata/data_nycbike/external_60.json": {
+      "bytes": 6194,
+      "sha256": "d9e5dc2ec2661d84c8b9c7511436a4c7553f9598039abfe5e8d2b90bdbdaf46a"
+    },
+    "data_metadata/data_nycbike/external_90.json": {
+      "bytes": 6194,
+      "sha256": "cea5fc90f9c99ae3fb54340c6f4a965fca9c84df9beeb30d97ed9bc5e05bc5dd"
+    },
+    "data_metadata/data_nyctaxi/external_30.json": {
+      "bytes": 6194,
+      "sha256": "d38d63d3a5b9aa4f89295654cfbe9427ea004011d95db99b38d44be4e12d7e4d"
+    },
+    "data_metadata/data_nyctaxi/external_60.json": {
+      "bytes": 6194,
+      "sha256": "e68ce90c2311c86f0b50f890abc8e122a5a91583422fea7080a714f8d230ba76"
+    },
+    "data_metadata/data_nyctaxi/external_90.json": {
+      "bytes": 6194,
+      "sha256": "d161cfbcba35e6ee9c50a34ff14be661c1adbff2aa0f6da0e81d5a2d08e10a84"
+    },
+    "data_metadata/expected_data_sha256.json": {
+      "bytes": 3279,
+      "sha256": "1550129f6cfacaa5453adbfb7a37e1f54b9aa166ae4c134dc9215c97b4c7b01c"
+    },
+    "docs/DATA_ACCESS.md": {
+      "bytes": 2608,
+      "sha256": "f0dfb1ab8065541314791b29de1f91df993dff852777ef63fcd91b081ff47199"
+    },
+    "docs/DATA_PROTOCOL.md": {
+      "bytes": 4579,
+      "sha256": "d701fbc495ebc2372fb04d04208595952a2e3c82e13e53803af46347bb4e56b1"
+    },
+    "docs/RELEASE_STATUS.md": {
+      "bytes": 1058,
+      "sha256": "a338f4be48a9e5f8b792e0cfb14dd85b8db8035a040d749c57ecacc9e4f90aea"
+    },
+    "docs/VERIFICATION.md": {
+      "bytes": 2057,
+      "sha256": "53af411965c77235fe5c8c93130a1147bf053a353b78fd6e459aa21a1ff2ce60"
+    },
+    "examples/forward.py": {
+      "bytes": 1098,
+      "sha256": "3d9cfc9fa6c908203b0c8a806c84e1b0286e9ee1e86e951009799a274a565463"
+    },
+    "export_ablation.py": {
+      "bytes": 2076,
+      "sha256": "e89428a907e242c5f4f35413bbf6f459cda5334c38d756a6e42b6aacaea63277"
+    },
+    "external_data/ATTRIBUTION.md": {
+      "bytes": 2224,
+      "sha256": "d9f583d9616e48001dc32a8e8fdd15fb7b5be7f19103fc9fa75fbda612ae3055"
+    },
+    "external_data/data_nycbike/external_30.json": {
+      "bytes": 6194,
+      "sha256": "0f5582c9c17d080eae5b4e8bcb5663f3aed2fabc471d0d6b90ed696d159135a4"
+    },
+    "external_data/data_nycbike/external_30.npy": {
+      "bytes": 7792256,
+      "sha256": "f4f7bad6f64c749f8e3196956e7a00170b982bc0652908330b08e14329725eaa"
+    },
+    "external_data/data_nycbike/external_60.json": {
+      "bytes": 6194,
+      "sha256": "d9e5dc2ec2661d84c8b9c7511436a4c7553f9598039abfe5e8d2b90bdbdaf46a"
+    },
+    "external_data/data_nycbike/external_60.npy": {
+      "bytes": 3896192,
+      "sha256": "d4da86e365195b819d9130fca172302ea9056795473e79c453098566a107d69b"
+    },
+    "external_data/data_nycbike/external_90.json": {
+      "bytes": 6194,
+      "sha256": "cea5fc90f9c99ae3fb54340c6f4a965fca9c84df9beeb30d97ed9bc5e05bc5dd"
+    },
+    "external_data/data_nycbike/external_90.npy": {
+      "bytes": 2597504,
+      "sha256": "ab8d8d2ae3edb1c19a771d81a3065945f1bfe639cd9f4df1f0d3471146e91dc4"
+    },
+    "external_data/data_nycbike/timestamps_30.csv": {
+      "bytes": 2090781,
+      "sha256": "50f7069cc53479f2d066c1d54c871e4c07bc4289eb9e5176153bb2c031d3f270"
+    },
+    "external_data/data_nycbike/timestamps_60.csv": {
+      "bytes": 1039869,
+      "sha256": "bddb061463a6a4e9bbca971ffa4b9901d9cc472eb13aee452d337a99270423be"
+    },
+    "external_data/data_nycbike/timestamps_90.csv": {
+      "bytes": 689565,
+      "sha256": "33d79a342fa9284198c65de024e56adfd2a700f17a49a86e816c3dd33dd3cf96"
+    },
+    "external_data/data_nyctaxi/external_30.json": {
+      "bytes": 6194,
+      "sha256": "d38d63d3a5b9aa4f89295654cfbe9427ea004011d95db99b38d44be4e12d7e4d"
+    },
+    "external_data/data_nyctaxi/external_30.npy": {
+      "bytes": 7784960,
+      "sha256": "a6d2e1a86ad43e3c5e7df337eeac897be16b928a95af2b08fbc4474a6e1ff031"
+    },
+    "external_data/data_nyctaxi/external_60.json": {
+      "bytes": 6194,
+      "sha256": "e68ce90c2311c86f0b50f890abc8e122a5a91583422fea7080a714f8d230ba76"
+    },
+    "external_data/data_nyctaxi/external_60.npy": {
+      "bytes": 3892544,
+      "sha256": "d6363873fd6168caa4c131810a77cb4c7759c511b5e2e0d2f74aab401e9e2652"
+    },
+    "external_data/data_nyctaxi/external_90.json": {
+      "bytes": 6194,
+      "sha256": "d161cfbcba35e6ee9c50a34ff14be661c1adbff2aa0f6da0e81d5a2d08e10a84"
+    },
+    "external_data/data_nyctaxi/external_90.npy": {
+      "bytes": 2595072,
+      "sha256": "fca33b4056ce854c99484d77cc11b91661a521c07c1de58749e22424aab0b96a"
+    },
+    "external_data/data_nyctaxi/timestamps_30.csv": {
+      "bytes": 2088813,
+      "sha256": "7ee2d9e4932a111d699600e81db71ce4240d99fb47fab29cd1bd99da111912ec"
+    },
+    "external_data/data_nyctaxi/timestamps_60.csv": {
+      "bytes": 1038885,
+      "sha256": "aa6a541115acb45f09e2b672d5a68401c1eb0d368c288b9e7c066860ffb107a8"
+    },
+    "external_data/data_nyctaxi/timestamps_90.csv": {
+      "bytes": 688909,
+      "sha256": "472cc6b9b28acf1fe4fee21f3e4e56c4f7faf73fb1a890084516c8681c35ecc4"
+    },
+    "external_data/README.md": {
+      "bytes": 1293,
+      "sha256": "cdbcec5cba01b7ae0453c395f38634f0db5bb917dbcf5c984561c616ba034325"
+    },
+    "external_data/SHA256.json": {
+      "bytes": 2045,
+      "sha256": "13d07f3c3ae35a4f1358292de274d043869471a329f6c506a24c31e77d37ec1e"
+    },
+    "predict.py": {
+      "bytes": 3272,
+      "sha256": "a2a2555fb183dc0d2d1b6bb229fb8cfec7eabcbc4b4ab0e628ff8b4b15505f93"
+    },
+    "prepare_data.py": {
+      "bytes": 2439,
+      "sha256": "01f0f75a6cdd804a5bb701975e5070a3798bffcd6ff6704d543b94cf985952fb"
+    },
+    "provenance/source_provenance.json": {
+      "bytes": 2418,
+      "sha256": "0de5ce41ec3bf015e5f80fc5691a7e7ac3e1ccb599392f6e253f58b4d0fe9b49"
+    },
+    "README.md": {
+      "bytes": 8289,
+      "sha256": "d8af744a1c91eded4352babb17cbb23ec49093a22a105016ed0c2664024689f8"
+    },
+    "README_zh.md": {
+      "bytes": 2729,
+      "sha256": "082205063dd7846098e0311096036bbeb549357a7f86b9ac628df0aa27075bd5"
+    },
+    "requirements-analysis.txt": {
+      "bytes": 39,
+      "sha256": "72e714d4c3a90f884c7447e83682325947842ac8b186c1047b237130cf03b27a"
+    },
+    "requirements.txt": {
+      "bytes": 66,
+      "sha256": "734c68a9b5a43248cf8a8e77d6fb0cb97ec00fb06ea31c55670e9f0bfceaedd6"
+    },
+    "run_suite.py": {
+      "bytes": 2073,
+      "sha256": "36e32425a47a1ed4698cbb37890b8a0ec0e87b03fdfdc77032b344730cc802e5"
+    },
+    "src/base_runner.py": {
+      "bytes": 7339,
+      "sha256": "74bccf613d27a99e00b93b66deac30772889a955e0f7760dfaa69dcce780c7bf"
+    },
+    "src/common_helpers.py": {
+      "bytes": 4080,
+      "sha256": "db293f9f55d4c2c322496a1b1f1c42c8fee0461748171da8847f9767f3646bf8"
+    },
+    "src/data_protocol.py": {
+      "bytes": 4880,
+      "sha256": "ec891d750973fdd95c63dab3858cd753117cde2a5d1ec41f06a0ef64ba7d89b9"
+    },
+    "src/evaluation_metrics.py": {
+      "bytes": 13233,
+      "sha256": "dae183f97ed61185068e6a17a2380216fb04cf95ce4a1c5e6dc4dae07226be2f"
+    },
+    "src/external_protocol.py": {
+      "bytes": 4147,
+      "sha256": "fbc24112a9e5690d5f75dd3243893a550489ffa861978dfba8ae81f98528d3b5"
+    },
+    "src/gated_core.py": {
+      "bytes": 2572,
+      "sha256": "e202bc2d1a9c4b387f4f724fb52f524d22283a650066cdf7ec6602db5c481a7d"
+    },
+    "src/models.py": {
+      "bytes": 1659,
+      "sha256": "e2d00b3bcaf1a8164fd66c5fa8ce3b5a26b1f0403fea919692f795d3feb55d5d"
+    },
+    "src/rebuild_external_features.py": {
+      "bytes": 13988,
+      "sha256": "5366fbf5a4779c48989949ae0423586eccccd0aadbaecc07f4606dcf5e521f7f"
+    },
+    "src/review_io.py": {
+      "bytes": 5216,
+      "sha256": "fc64671352f03fceea1934f8d09b316d4fd375f4d3303e503cca2dc5582282cf"
+    },
+    "src/rtat_model.py": {
+      "bytes": 17399,
+      "sha256": "aa7e71630333fe408fe700b85147c9ba990d6442947fe07d756ecf6a10d0e362"
+    },
+    "src/run_reproducible.py": {
+      "bytes": 1120,
+      "sha256": "0f94eb407be19a08ac455c2fdcc45efdab6d1f0af938e7be0850839bc637ea66"
+    },
+    "src/tod_core.py": {
+      "bytes": 5524,
+      "sha256": "ec878df766d108e0f3457ce315b6a351dfa99a1ada240c67380a645da34a98dd"
+    },
+    "summarize.py": {
+      "bytes": 2927,
+      "sha256": "630d1611eebb502f16cf6194920cb2463105a6e17bfcd716710fad5366c3e528"
+    },
+    "tests/test_protocol.py": {
+      "bytes": 7202,
+      "sha256": "19f854e48040ba02c6e3928616b8bdf3f569323274435961b202038d484babec"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 1552,
+      "sha256": "2ef048eb60a33e5b1b75003c813bb44106987bf9451c7f4274ec1a259f244823"
+    },
+    "train.py": {
+      "bytes": 9648,
+      "sha256": "132abda37e84be3be834aefb260550d9eeb15aab00c00da0a5c4787ff9957673"
+    }
+  }
+}

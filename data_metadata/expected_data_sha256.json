@@ -1,0 +1,68 @@
+[
+  {
+    "dataset": "nyctaxi",
+    "minutes": 30,
+    "samples": 51216,
+    "files": {
+      "flow/data_nyctaxi/data_x_30.npy": "e3c133249bafac1878c57a6c5b9d499160b3e85ebe466c7208fc8149d34a2590",
+      "flow/data_nyctaxi/data_y_30.npy": "4002301b215889e875f13a54a41ba73b089f4f5a436719f9e38c23ed98261029",
+      "external/data_nyctaxi/external_30.npy": "a6d2e1a86ad43e3c5e7df337eeac897be16b928a95af2b08fbc4474a6e1ff031",
+      "external/data_nyctaxi/timestamps_30.csv": "7ee2d9e4932a111d699600e81db71ce4240d99fb47fab29cd1bd99da111912ec"
+    }
+  },
+  {
+    "dataset": "nyctaxi",
+    "minutes": 60,
+    "samples": 25608,
+    "files": {
+      "flow/data_nyctaxi/data_x_60.npy": "031477e3cb97de4b4be1257bdc77b372115fa5a5886b8138431d15dcbaf052f2",
+      "flow/data_nyctaxi/data_y_60.npy": "4485f926a2bc134d1cdbac3659fdf98d7138a6504f0dc8616329a8b4040efb33",
+      "external/data_nyctaxi/external_60.npy": "d6363873fd6168caa4c131810a77cb4c7759c511b5e2e0d2f74aab401e9e2652",
+      "external/data_nyctaxi/timestamps_60.csv": "aa6a541115acb45f09e2b672d5a68401c1eb0d368c288b9e7c066860ffb107a8"
+    }
+  },
+  {
+    "dataset": "nyctaxi",
+    "minutes": 90,
+    "samples": 17072,
+    "files": {
+      "flow/data_nyctaxi/data_x_90.npy": "a692d942f8df94a8d5bf6b80450330c84a7d9f908d89ca2f67d0d4ca774119d8",
+      "flow/data_nyctaxi/data_y_90.npy": "0a35fda64e59f7a4e5112d5a7c0ab9164e3b54c03c6cd5cb8427ab844afb8f1a",
+      "external/data_nyctaxi/external_90.npy": "fca33b4056ce854c99484d77cc11b91661a521c07c1de58749e22424aab0b96a",
+      "external/data_nyctaxi/timestamps_90.csv": "472cc6b9b28acf1fe4fee21f3e4e56c4f7faf73fb1a890084516c8681c35ecc4"
+    }
+  },
+  {
+    "dataset": "nycbike",
+    "minutes": 30,
+    "samples": 51264,
+    "files": {
+      "flow/data_nycbike/data_x_30.npy": "190cb0a426387bb9d0f6fe70fc29de578b61848d1d0786ef1aa82cb2b8407b0f",
+      "flow/data_nycbike/data_y_30.npy": "52f54c0528430e952d1124a72e7ae7ce39283d5dda8804775647bf7e25fee422",
+      "external/data_nycbike/external_30.npy": "f4f7bad6f64c749f8e3196956e7a00170b982bc0652908330b08e14329725eaa",
+      "external/data_nycbike/timestamps_30.csv": "50f7069cc53479f2d066c1d54c871e4c07bc4289eb9e5176153bb2c031d3f270"
+    }
+  },
+  {
+    "dataset": "nycbike",
+    "minutes": 60,
+    "samples": 25632,
+    "files": {
+      "flow/data_nycbike/data_x_60.npy": "43f7db5a4e67bc616c3a62e230e7a9054ead3f37ba571d9f0844ec3f40491879",
+      "flow/data_nycbike/data_y_60.npy": "858024f65e4dbf2e8ee7a7fc01acf4577b0e9c3a1a6ebeb85927fd60ea230965",
+      "external/data_nycbike/external_60.npy": "d4da86e365195b819d9130fca172302ea9056795473e79c453098566a107d69b",
+      "external/data_nycbike/timestamps_60.csv": "bddb061463a6a4e9bbca971ffa4b9901d9cc472eb13aee452d337a99270423be"
+    }
+  },
+  {
+    "dataset": "nycbike",
+    "minutes": 90,
+    "samples": 17088,
+    "files": {
+      "flow/data_nycbike/data_x_90.npy": "dec38dbfacef5d1fad60ef99c166cad7e71c4e42104ef70965b13d02ec01b946",
+      "flow/data_nycbike/data_y_90.npy": "8c215f2bd79249184da8c9fd1780bb0e1a891d6a00a42d803f91f4566d28804d",
+      "external/data_nycbike/external_90.npy": "ab8d8d2ae3edb1c19a771d81a3065945f1bfe639cd9f4df1f0d3471146e91dc4",
+      "external/data_nycbike/timestamps_90.csv": "33d79a342fa9284198c65de024e56adfd2a700f17a49a86e816c3dd33dd3cf96"
+    }
+  }
+]
