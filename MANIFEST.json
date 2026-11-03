@@ -92,8 +92,8 @@
       "sha256": "a338f4be48a9e5f8b792e0cfb14dd85b8db8035a040d749c57ecacc9e4f90aea"
     },
     "docs/VERIFICATION.md": {
-      "bytes": 2057,
-      "sha256": "53af411965c77235fe5c8c93130a1147bf053a353b78fd6e459aa21a1ff2ce60"
+      "bytes": 1740,
+      "sha256": "2dc8518df8502871c3d96859d58676421691421a9dfce13ab0325362153fcb54"
     },
     "examples/forward.py": {
       "bytes": 1098,
