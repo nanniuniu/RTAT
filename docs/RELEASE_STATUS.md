@@ -1,9 +1,17 @@
-# Release scope
+# Project guide
 
-Prepared for https://github.com/nanniuniu/RTAT on 3 November 2026.
+Repository: https://github.com/nanniuniu/RTAT
 
-Included: full RTAT model, six profiles, training, explicit fine-tuning, ablation interfaces, prediction, spatial evaluation, multi-seed aggregation, tests, reconstructed external/calendar data, schemas, hashes and data/source attribution.
+## Model and experiment workflows
 
-Excluded: pretrained weights, optimizer/checkpoint archives, historical prediction files, original logs/run records, private manuscript files, machine-specific working documents, raw weather response caches and third-party baseline repositories. Flow benchmarks are linked at their original source rather than redistributed here.
+The implementation provides the RTAT backbone, time-of-day conditioning and gated recent-observation residual. Six dataset/interval profiles support NYCTaxi and NYCBike at 30, 60 and 90 minutes. Command-line entry points cover training, explicit weight-only fine-tuning, path/component ablations, prediction, spatial evaluation and multi-seed aggregation.
 
-Local training creates weights, predictions, scalers and logs; `.gitignore` keeps them out of normal commits. This repository supports running new experiments with the documented inputs and protocols. It does not certify exact numerical recreation of every historical manuscript table. A project-wide software license and persistent archive identifier have not been assigned by this preparation step.
+## Data preparation
+
+Obtain the processed flow benchmark from the ProSTformer data release linked in `DATA_ACCESS.md`. Combine it with the matched external/calendar inputs in `external_data/` using `prepare_data.py`. The preparation and loading code validates input integrity, sample alignment and feature schemas.
+
+## Training outputs
+
+Each training run generates its configuration, fitted scalers, epoch history, validation-selected model checkpoint, validation predictions and final test evaluation. Use the checkpoint and scalers from the same run for prediction. `summarize.py` aggregates completed runs and reports sample standard deviations, seed coverage and matched-seed comparisons.
+
+The main README contains installation and command examples. `VERIFICATION.md` describes CPU functional checks; `DATA_PROTOCOL.md` describes the input and experimental protocol. Source attribution and applicable third-party terms are recorded in `THIRD_PARTY_NOTICES.md` and `external_data/ATTRIBUTION.md`.

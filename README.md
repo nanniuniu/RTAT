@@ -8,7 +8,7 @@ RTAT predicts two-channel urban flow maps on a 12 × 16 grid. The implementation
 
 This repository provides model code, training, explicit weight-only fine-tuning, path/component ablation interfaces, prediction, spatial evaluation and multi-seed aggregation. Six NYCTaxi/NYCBike profiles cover 30-, 60- and 90-minute intervals. The matching reconstructed calendar files and 38-column external-feature arrays are included in [`external_data/`](external_data/README.md).
 
-**Release scope:** trained weights, historical prediction files, original training logs and private run records are not distributed. Flow benchmark arrays are obtained from the original provider. The repository supports running new RTAT experiments; exact equality with every historical manuscript result across software/hardware environments is not certified. See [validation scope](docs/VERIFICATION.md).
+Start by preparing the flow benchmark with the included external/calendar inputs, then train a model and use the generated checkpoint for prediction and evaluation. [Verification checks](docs/VERIFICATION.md) cover model behavior, data integrity and the training lifecycle.
 
 ## Install and check
 
@@ -20,7 +20,7 @@ python -m unittest discover -s tests -v
 python examples/forward.py
 ```
 
-Reference checks use PyTorch 2.6.0 and NumPy 2.2.6. CPU checks require no CUDA device. Full training is intended for a CUDA GPU; the default batch size is 128. `--workers 0` works on Windows and Linux. The forward example uses random weights and synthetic inputs; it is not a paper accuracy result.
+Reference checks use PyTorch 2.6.0 and NumPy 2.2.6. CPU checks require no CUDA device. Full training is intended for a CUDA GPU; the default batch size is 128. `--workers 0` works on Windows and Linux. The forward example checks CPU execution using random weights and synthetic inputs.
 
 ## Prepare data
 
@@ -68,7 +68,7 @@ To fine-tune, first train a 30-minute source checkpoint from the same dataset. T
 python train.py --data-root data --dataset nyctaxi --minutes 60 --variant full --seed 0 --init-from runs/taxi30_full_seed0/best_checkpoint.pt --output runs/taxi60_full_finetune_seed0
 ```
 
-This transfers learned weights while retaining target-interval scaling and anchor buffers and creating a new optimizer. Source seed/hash and target configuration are recorded. Direct training and fine-tuning are distinct protocols; this interface does not infer historical source-checkpoint choices. Checkpoints saved by this code contain model weights and metadata, not optimizer state for exact interrupted-run resumption.
+This transfers learned weights while retaining target-interval scaling and anchor buffers and creating a new optimizer. The source checkpoint and target configuration are recorded for each run. Use the direct-training command for initialization from scratch, or `--init-from` for explicit weight transfer. Saved model checkpoints support prediction and initialization of subsequent fine-tuning runs.
 
 ## Ablations and summaries
 
@@ -79,9 +79,9 @@ python run_suite.py --data-root data --output-root runs/path_taxi30 --dataset ny
 python summarize.py --runs-root runs/path_taxi30 --output results/path_taxi30_summary.json
 ```
 
-Remove `--dry-run` to train. `run_suite.py` stops on the first failed command and refuses pre-existing run directories; it never silently mixes new and archived runs. The summary command runs after training has completed. Means and sample standard deviations (`ddof=1`) are computed from completed runs, with explicit missing-seed and duplicate-seed checks and paired variant-minus-full differences.
+Remove `--dry-run` to train. `run_suite.py` runs jobs sequentially, stops on the first failed command and protects saved outputs by requiring new run directories. The summary command runs after training has completed. Means and sample standard deviations (`ddof=1`) are computed from completed runs, with explicit missing-seed and duplicate-seed checks and paired variant-minus-full differences.
 
-For component-removal experiments, use `train.py --disable-component lag_bias`, `temporal_mask`, `shifted_windows` or `external` with the other required arguments. Each launches a fresh experiment. Removing the external branch is incompatible with ToD: select `backbone` or `gated_residual`. These options do not promise to recreate arbitrary historical single-run ablation scores.
+For component-removal experiments, use `train.py --disable-component lag_bias`, `temporal_mask`, `shifted_windows` or `external` with the other required arguments. Each launches a fresh experiment. Removing the external branch is incompatible with ToD: select `backbone` or `gated_residual`.
 
 ## Predict and evaluate
 
@@ -93,9 +93,9 @@ python -m pip install -r requirements-analysis.txt
 python src/evaluation_metrics.py runs/taxi30_full_seed0/test_predictions.npz --train-target data/flow/data_nyctaxi/data_y_30.npy --train-stop 48528 --output-dir results/taxi30_spatial
 ```
 
-`input_history.npy` contains raw-count observations; `input_external.npy` contains the 38 unstandardized external columns; `input_slots.npy` contains integer reconstructed half-hour IDs 0–47. Predictions are raw counts, without clipping. Use the matching training stop from `configs/` for each dataset and interval. Pretrained weights are not needed to start new training; inference requires weights trained by the user or separately obtained.
+`input_history.npy` contains raw-count observations; `input_external.npy` contains the 38 unstandardized external columns; `input_slots.npy` contains integer reconstructed half-hour IDs 0–47. Predictions are raw counts, without clipping. Use the matching training stop from `configs/` for each dataset and interval. Use the checkpoint and fitted scalers from the same completed training run.
 
-## Layout and scope
+## Repository layout
 
 - `src/`: backbone, conditioning/residual paths, scaling, data access and evaluation.
 - `configs/`: six fixed benchmark profiles.
@@ -104,8 +104,6 @@ python src/evaluation_metrics.py runs/taxi30_full_seed0/test_predictions.npz --t
 - `tests/`, `examples/`: CPU protocol checks and a synthetic forward example.
 - `docs/`: data protocol, acquisition instructions and validation scope.
 
-Independent third-party baseline implementations and raw-trip-to-grid construction are outside this repository. Full RTAT has 64,812,306 trainable parameters. Input scaling uses training observations only; the final four weeks form the test set and the preceding four weeks form validation. Calendar labels are reconstructed and weather covariates use lagged retrospective ERA5 rather than operational forecasts. Array indices alone do not establish geographic coordinates.
+Full RTAT has 64,812,306 trainable parameters. Input scaling uses training observations only; the final four weeks form the test set and the preceding four weeks form validation. Calendar labels are reconstructed and weather covariates use lagged retrospective ERA5 rather than operational forecasts. Array indices alone do not establish geographic coordinates.
 
 [中文说明](README_zh.md) · [Data attribution](external_data/ATTRIBUTION.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
-
-No project-wide open-source license has been selected by the rights holders. Public visibility alone does not supply a software reuse license; upstream data terms remain applicable.

@@ -38,4 +38,4 @@ Training uses raw-count MSE, AdamW, batch size 128, weight decay 0.08, gradient 
 
 CUDA runs use mixed precision with initial gradient scale 256 and fused AdamW. Validation and final testing run without autocast. Overflowed updates skip the scheduler step. The final test loader is created after checkpoint selection and validation reload verification. Hashing source files and arrays does not fit parameters or use test metrics for checkpoint selection.
 
-A complete three-seed aggregate requires seeds 0, 1 and 2. Direct runs, fine-tuned runs and structural ablations are grouped separately. Historical run snapshots and prediction records are not distributed. Use the included training and aggregation interfaces to produce and summarize new runs.
+A complete three-seed aggregate requires seeds 0, 1 and 2. Direct runs, fine-tuned runs and structural ablations are grouped separately. Use the training and aggregation interfaces to generate completed runs and summarize matched configurations and seeds.

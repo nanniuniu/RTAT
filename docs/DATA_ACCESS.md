@@ -9,7 +9,7 @@ The source repository README links the processed datasets:
 - NYCBike: https://pan.baidu.com/s/1i4N3xuqFrppRgg0Gd6yHUQ (public extraction code: `1234`).
 - NYCTaxi: https://pan.baidu.com/s/1dW3UyYJKL-YLgw7a6ujuLw (public extraction code: `1234`).
 
-These are links published by the provider, not independently verified download mirrors. If they change, consult that repository. No explicit redistribution permission for the processed flow arrays was established during release preparation, so this repository links to the source rather than republishing them. The original trip providers are NYC TLC and Citi Bike; their original records are not substitutes for the supplied processed arrays.
+These download links are maintained by the benchmark provider; consult the source repository for updates. The processed arrays are derived from NYC TLC and Citi Bike records. Use the processed benchmark arrays to match the supplied sample counts, layouts and experimental input definitions.
 
 Required per dataset: `data_x_30.npy`, `data_y_30.npy`, `data_x_60.npy`, `data_y_60.npy`, `data_x_90.npy`, and `data_y_90.npy`. Expected hashes and sample counts are in `data_metadata/expected_data_sha256.json`. Use `prepare_data.py` to verify these before training.
 
@@ -31,4 +31,4 @@ The original reconstruction implementation is retained:
 python src/rebuild_external_features.py --data-root benchmark --output-root rebuilt_external --download-weather
 ```
 
-This audits both datasets and all intervals, and requires the original `ext_features_30.npy` files for its legacy-calendar diagnostic in addition to the flow arrays. It requests retrospective ERA5 weather through Open-Meteo; it does not recover original calendar labels or released weather. New API responses may differ from archived inputs. Keep the included exact arrays for matching the experimental input hashes; do not claim that changed hashes reproduce the same inputs. API access remains subject to Open-Meteo's service terms and limits. Raw API responses and internal audit/run records are not distributed here.
+This audits both datasets and all intervals, and requires the original `ext_features_30.npy` files for its legacy-calendar diagnostic in addition to the flow arrays. It requests retrospective ERA5 weather through Open-Meteo; it does not recover original calendar labels or released weather. For the documented input version, use the matched arrays in `external_data/`. When regenerating inputs, compare them with the expected values in `data_metadata/` and record the feature version used for the experiment. API access remains subject to Open-Meteo's service terms and limits.

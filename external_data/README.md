@@ -12,4 +12,4 @@ To prepare these alongside the original processed flow benchmark, run from repos
 python prepare_data.py --flow-root benchmark --external-root external_data --output-root data
 ```
 
-No trained weights or run records are included in this directory.
+After preparing these inputs, follow the training and evaluation commands in the main README.

@@ -1,11 +1,38 @@
-# Validation scope
+# Verification checks
 
-The model, training, prediction, data preparation and aggregation implementations are retained from the checked RTAT review package. This public tree adds documentation, a batch command runner and a synthetic forward example. Existing model/training code is not rewritten for publication. The original private engineering records and experiment files remain archived separately.
+The repository includes CPU functional tests, a synthetic forward example and input-validation entry points.
 
-The included CPU tests cover six chronological split/lag profiles, training-only scalers, slot encoding, all five path model counts and forward passes, gradients through gate/ToD, weight-transfer buffer handling, duplicate/missing seeds, and the validation-selection/final-test lifecycle using a tiny synthetic training model. These checks are functional checks, not new benchmark training runs.
+## CPU protocol and model tests
 
-The checks described here establish code functionality and input integrity. They do not constitute new benchmark training runs or certify exact numerical recreation of every historical manuscript result. Trained weights and historical prediction records are not distributed in this repository.
+```bash
+python -m unittest discover -s tests -v
+```
 
-New training generates its own validation-selected checkpoint and one final test evaluation. The weight-transfer interface records the explicitly supplied source; it does not infer historical fine-tuning provenance. Component-removal flags define fresh experiments and do not promise equality with unspecified historical single-run ablations. Independent baseline implementations are not bundled.
+The tests check:
 
-The preparation and loading code validates included feature/calendar data against the expected values in `data_metadata/`. Reconstructed labels and lagged retrospective weather describe the adopted input protocol; they do not certify recovered original timestamps or real-time weather availability.
+- Chronological split boundaries and historical lag sets for six dataset/interval profiles.
+- Training-only input/external scaling and unscaled time-slot IDs.
+- Parameter counts and forward execution for all five path variants, plus gradients through the full model's gate and time-of-day embeddings.
+- Weight transfer while preserving target-interval anchor buffers.
+- Seed coverage, sample standard deviations and duplicate-seed handling in aggregation.
+- Validation-based checkpoint selection, strict reload and one final test evaluation, using a small synthetic training model to exercise the lifecycle.
+
+## Synthetic forward example
+
+```bash
+python examples/forward.py
+```
+
+This example constructs the full 64,812,306-parameter model with random weights and synthetic inputs, then checks a finite output of shape `[1,2,12,16]`. It checks model execution; benchmark accuracy is evaluated separately through the training/evaluation workflow.
+
+## Input validation
+
+After data preparation, validate one profile with:
+
+```bash
+python train.py --data-root data --dataset nyctaxi --minutes 30 --validate-only
+```
+
+The preparation and loading code checks expected input values, shapes, reconstructed calendar alignment and external-feature encodings. `docs/DATA_PROTOCOL.md` describes the reconstructed labels and lagged retrospective weather protocol.
+
+During training, validation selects the checkpoint; the final test evaluation follows checkpoint reload and validation verification. Each run records its explicit initialization and configuration, and completed runs can be summarized with matched seed groups.
