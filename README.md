@@ -106,6 +106,6 @@ python src/evaluation_metrics.py runs/taxi30_full_seed0/test_predictions.npz --t
 
 Independent third-party baseline implementations and raw-trip-to-grid construction are outside this repository. Full RTAT has 64,812,306 trainable parameters. Input scaling uses training observations only; the final four weeks form the test set and the preceding four weeks form validation. Calendar labels are reconstructed and weather covariates use lagged retrospective ERA5 rather than operational forecasts. Array indices alone do not establish geographic coordinates.
 
-[中文说明](README_zh.md) · [Data attribution](external_data/ATTRIBUTION.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [File hashes](MANIFEST.json)
+[中文说明](README_zh.md) · [Data attribution](external_data/ATTRIBUTION.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
 No project-wide open-source license has been selected by the rights holders. Public visibility alone does not supply a software reuse license; upstream data terms remain applicable.

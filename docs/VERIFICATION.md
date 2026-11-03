@@ -8,4 +8,4 @@ The checks described here establish code functionality and input integrity. They
 
 New training generates its own validation-selected checkpoint and one final test evaluation. The weight-transfer interface records the explicitly supplied source; it does not infer historical fine-tuning provenance. Component-removal flags define fresh experiments and do not promise equality with unspecified historical single-run ablations. Independent baseline implementations are not bundled.
 
-Included feature/calendar data must match the published SHA256 inventory. Reconstructed labels and lagged retrospective weather describe the adopted input protocol; they do not certify recovered original timestamps or real-time weather availability.
+The preparation and loading code validates included feature/calendar data against the expected values in `data_metadata/`. Reconstructed labels and lagged retrospective weather describe the adopted input protocol; they do not certify recovered original timestamps or real-time weather availability.
