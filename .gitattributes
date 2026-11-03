@@ -1,0 +1,2 @@
+# Preserve released bytes, including calendar CSV newlines and SHA256 inputs.
+* -text

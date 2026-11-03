@@ -3,9 +3,25 @@
   "prepared": "2026-11-03",
   "scope": "RTAT model and experiment code, matched external/calendar data; no weights or historical run artifacts.",
   "files": {
+    ".gitattributes": {
+      "bytes": 86,
+      "sha256": "f58d832dcf36785ab2f2cb51820b9ea300f3054a81d7575ffbd3474057dedec9"
+    },
     ".gitignore": {
       "bytes": 351,
       "sha256": "6f18182aafd662942e3e1385f364e62048a8e2a287d7cb1738b386d380d7c700"
+    },
+    "README.md": {
+      "bytes": 8289,
+      "sha256": "d8af744a1c91eded4352babb17cbb23ec49093a22a105016ed0c2664024689f8"
+    },
+    "README_zh.md": {
+      "bytes": 2729,
+      "sha256": "082205063dd7846098e0311096036bbeb549357a7f86b9ac628df0aa27075bd5"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 1552,
+      "sha256": "2ef048eb60a33e5b1b75003c813bb44106987bf9451c7f4274ec1a259f244823"
     },
     "assets/architecture.png": {
       "bytes": 526490,
@@ -91,6 +107,14 @@
       "bytes": 2224,
       "sha256": "d9f583d9616e48001dc32a8e8fdd15fb7b5be7f19103fc9fa75fbda612ae3055"
     },
+    "external_data/README.md": {
+      "bytes": 1293,
+      "sha256": "cdbcec5cba01b7ae0453c395f38634f0db5bb917dbcf5c984561c616ba034325"
+    },
+    "external_data/SHA256.json": {
+      "bytes": 2045,
+      "sha256": "13d07f3c3ae35a4f1358292de274d043869471a329f6c506a24c31e77d37ec1e"
+    },
     "external_data/data_nycbike/external_30.json": {
       "bytes": 6194,
       "sha256": "0f5582c9c17d080eae5b4e8bcb5663f3aed2fabc471d0d6b90ed696d159135a4"
@@ -163,14 +187,6 @@
       "bytes": 688909,
       "sha256": "472cc6b9b28acf1fe4fee21f3e4e56c4f7faf73fb1a890084516c8681c35ecc4"
     },
-    "external_data/README.md": {
-      "bytes": 1293,
-      "sha256": "cdbcec5cba01b7ae0453c395f38634f0db5bb917dbcf5c984561c616ba034325"
-    },
-    "external_data/SHA256.json": {
-      "bytes": 2045,
-      "sha256": "13d07f3c3ae35a4f1358292de274d043869471a329f6c506a24c31e77d37ec1e"
-    },
     "predict.py": {
       "bytes": 3272,
       "sha256": "a2a2555fb183dc0d2d1b6bb229fb8cfec7eabcbc4b4ab0e628ff8b4b15505f93"
@@ -182,14 +198,6 @@
     "provenance/source_provenance.json": {
       "bytes": 2418,
       "sha256": "0de5ce41ec3bf015e5f80fc5691a7e7ac3e1ccb599392f6e253f58b4d0fe9b49"
-    },
-    "README.md": {
-      "bytes": 8289,
-      "sha256": "d8af744a1c91eded4352babb17cbb23ec49093a22a105016ed0c2664024689f8"
-    },
-    "README_zh.md": {
-      "bytes": 2729,
-      "sha256": "082205063dd7846098e0311096036bbeb549357a7f86b9ac628df0aa27075bd5"
     },
     "requirements-analysis.txt": {
       "bytes": 39,
@@ -258,10 +266,6 @@
     "tests/test_protocol.py": {
       "bytes": 7202,
       "sha256": "19f854e48040ba02c6e3928616b8bdf3f569323274435961b202038d484babec"
-    },
-    "THIRD_PARTY_NOTICES.md": {
-      "bytes": 1552,
-      "sha256": "2ef048eb60a33e5b1b75003c813bb44106987bf9451c7f4274ec1a259f244823"
     },
     "train.py": {
       "bytes": 9648,
