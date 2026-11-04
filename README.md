@@ -1,8 +1,8 @@
 # RTAT
 
-**RTAT with Gated Recent-Observation Residuals and Time-of-Day Conditioning for Grid-Based Urban Flow Forecasting**
+**A Region-Temporal Adaptive Transformer for Grid-Based Urban Flow Forecasting**
 
-RTAT predicts two-channel urban flow maps on a 12 × 16 grid. The implementation combines a hierarchical regional-attention backbone, stage-wise time-of-day conditioning, and a gated residual from recent observations.
+The Region-Temporal Adaptive Transformer (RTAT) predicts two-channel urban flow maps on a 12 × 16 grid. The implementation combines a hierarchical regional-attention backbone, stage-wise time-of-day conditioning, and a gated residual from recent observations.
 
 ![RTAT architecture](assets/architecture.png)
 
